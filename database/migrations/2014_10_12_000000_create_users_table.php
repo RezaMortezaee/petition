@@ -21,6 +21,10 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+
+            $table->foreignId('sign_id');
+            $table->foreignId('petition_id');
+            $table->foreignId('comment_id');
         });
     }
 
