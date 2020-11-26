@@ -1,0 +1,3 @@
+<x-image>
+
+</x-image>
