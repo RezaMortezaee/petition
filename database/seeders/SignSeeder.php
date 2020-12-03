@@ -13,6 +13,6 @@ class SignSeeder extends Seeder
      */
     public function run()
     {
-        //
+        \App\Models\Sign::factory(50)->create();
     }
 }

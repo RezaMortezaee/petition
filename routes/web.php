@@ -18,9 +18,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+/* Petitions */
+Route::get('petitions', [PetitionController::class, 'index']);
+Route::post('petitions', [PetitionController::class, 'index']);
 
-/**
- * Image Path
-*/
+
+/* Image Path */
 Route::get('upload-image', [UploadImageController::class, 'index']);
 Route::post('save', [UploadImageController::class, 'save']);

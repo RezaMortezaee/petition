@@ -1,0 +1,82 @@
+ii  libapache2-mod-php7.3                    7.3.24-3+0~20201103.72+debian10~1.gbp945915        amd64        server-side, HTML-embedded scripting language (Apache 2 module)
+ii  libapache2-mod-php7.4                    7.4.12-3+0~20201103.32+debian10~1.gbpa97e22        amd64        server-side, HTML-embedded scripting language (Apache 2 module)
+ii  php-apcu                                 5.1.18+4.0.11-1+0~20200518.14+debian10~1.gbpa99079 amd64        APC User Cache for PHP
+ii  php-codecoverage                         6.1.4+dfsg-1                                       all          collection, processing, and rendering for code coverage
+ii  php-common                               2:79+0~20201020.27+debian10~1.gbp95ec92            all          Common files for PHP packages
+ii  php-composer-ca-bundle                   1.1.4-1                                            all          utility library to find a path to the system CA bundle
+ii  php-composer-semver                      1.4.2-1                                            all          utilities, version constraint parsing and validation
+ii  php-composer-spdx-licenses               1.5.0-1                                            all          SPDX licenses list and validation library
+ii  php-composer-xdebug-handler              1.3.2-1                                            all          Restarts a process without xdebug
+ii  php-deepcopy                             1.8.1-1                                            all          create deep copies (clones) of objects
+ii  php-doctrine-instantiator                1.1.0-2                                            all          lightweight utility to instantiate objects in PHP
+ii  php-file-iterator                        2.0.2-1                                            all          FilterIterator implementation for PHP
+ii  php-google-recaptcha                     1.2.4-1~bpo10+1                                    all          reCAPTCHA PHP client library
+ii  php-json-schema                          5.2.8-1                                            all          implementation of JSON schema
+ii  php-mbstring                             2:7.4+79+0~20201020.27+debian10~1.gbp95ec92        all          MBSTRING module for PHP [default]
+ii  php-mysql                                2:7.4+79+0~20201020.27+debian10~1.gbp95ec92        all          MySQL module for PHP [default]
+ii  php-phar-io-manifest                     1.0.3-1                                            all          reading phar.io manifest information from a PHP Archive (Phar)
+ii  php-phar-io-version                      2.0.1-1                                            all          handling version information and constraint
+ii  php-phpdocumentor-reflection-common      1.0.1-1                                            all          Common reflection classes - phpDocumentor component
+ii  php-phpdocumentor-reflection-docblock    4.3.0-1                                            all          DocBlock parser - phpDocumentor component
+ii  php-phpdocumentor-type-resolver          0.4.0-2                                            all          TypeResolver and FqsenResolver - phpDocumentor component
+ii  php-phpmyadmin-motranslator              5.0.0-1~bpo10+1                                    all          translation API for PHP using Gettext MO files
+ii  php-phpmyadmin-shapefile                 2.1-3~bpo10+1                                      all          translation API for PHP using Gettext MO files
+ii  php-phpmyadmin-sql-parser                4.6.1-2~bpo10+1                                    all          validating SQL lexer and parser
+ii  php-phpseclib                            2.0.14-1                                           all          implementations of an arbitrary-precision integer arithmetic library
+ii  php-phpspec-prophecy                     1.8.0-1                                            all          object mocking framework - phpspec component
+ii  php-psr-cache                            1.0.1-1                                            all          Common interface for caching libraries
+ii  php-psr-container                        1.0.0-1                                            all          Common Container Interface (PHP FIG PSR-11)
+ii  php-psr-log                              1.1.0-1                                            all          common interface for logging libraries
+ii  php-psr-simple-cache                     1.0.1-1                                            all          Common interfaces for simple caching
+ii  php-symfony-cache                        3.4.22+dfsg-2+deb10u1                              all          Symfony Cache component with PSR-6, PSR-16, and tags
+ii  php-symfony-console                      3.4.22+dfsg-2+deb10u1                              all          run tasks from the command line
+ii  php-symfony-debug                        3.4.22+dfsg-2+deb10u1                              all          tools to make debugging of PHP code easier
+ii  php-symfony-expression-language          3.4.22+dfsg-2+deb10u1                              all          compile and evaluate expressions
+ii  php-symfony-filesystem                   3.4.22+dfsg-2+deb10u1                              all          basic filesystem utilities
+ii  php-symfony-finder                       3.4.22+dfsg-2+deb10u1                              all          find files and directories
+ii  php-symfony-process                      3.4.22+dfsg-2+deb10u1                              all          execute commands in sub-processes
+ii  php-text-template                        1.2.1-2                                            all          Simple template engine
+ii  php-timer                                2.1.1-1                                            all          Utility class for timing
+ii  php-token-stream                         3.0.1-1                                            all          Wrapper around PHP's tokenizer extension
+ii  php-tokenizer                            1.1.0-1                                            all          tokenized PHP source to XML converter
+ii  php-twig                                 2.13.0-1~bpo10+1                                   all          Flexible, fast, and secure template engine for PHP
+ii  php-twig-extensions                      1.5.4-1~bpo10+1                                    all          extensions for the Twig template system
+ii  php-webmozart-assert                     1.4.0-3                                            all          Assertions to validate method input/output with nice error messages
+ii  php-xml                                  2:7.4+79+0~20201020.27+debian10~1.gbp95ec92        all          DOM, SimpleXML, WDDX, XML, and XSL module for PHP [default]
+ii  php7.3                                   7.3.24-3+0~20201103.72+debian10~1.gbp945915        all          server-side, HTML-embedded scripting language (metapackage)
+ii  php7.3-cli                               7.3.24-3+0~20201103.72+debian10~1.gbp945915        amd64        command-line interpreter for the PHP scripting language
+ii  php7.3-common                            7.3.24-3+0~20201103.72+debian10~1.gbp945915        amd64        documentation, examples and common module for PHP
+ii  php7.3-json                              7.3.24-3+0~20201103.72+debian10~1.gbp945915        amd64        JSON module for PHP
+ii  php7.3-mbstring                          7.3.24-3+0~20201103.72+debian10~1.gbp945915        amd64        MBSTRING module for PHP
+ii  php7.3-mysql                             7.3.24-3+0~20201103.72+debian10~1.gbp945915        amd64        MySQL module for PHP
+ii  php7.3-opcache                           7.3.24-3+0~20201103.72+debian10~1.gbp945915        amd64        Zend OpCache module for PHP
+ii  php7.3-readline                          7.3.24-3+0~20201103.72+debian10~1.gbp945915        amd64        readline module for PHP
+ii  php7.3-xml                               7.3.24-3+0~20201103.72+debian10~1.gbp945915        amd64        DOM, SimpleXML, WDDX, XML, and XSL module for PHP
+ii  php7.3-zip                               7.3.24-3+0~20201103.72+debian10~1.gbp945915        amd64        Zip module for PHP
+ii  php7.4                                   7.4.12-3+0~20201103.32+debian10~1.gbpa97e22        all          server-side, HTML-embedded scripting language (metapackage)
+ii  php7.4-bcmath                            7.4.12-3+0~20201103.32+debian10~1.gbpa97e22        amd64        Bcmath module for PHP
+ii  php7.4-bz2                               7.4.12-3+0~20201103.32+debian10~1.gbpa97e22        amd64        bzip2 module for PHP
+ii  php7.4-cli                               7.4.12-3+0~20201103.32+debian10~1.gbpa97e22        amd64        command-line interpreter for the PHP scripting language
+ii  php7.4-common                            7.4.12-3+0~20201103.32+debian10~1.gbpa97e22        amd64        documentation, examples and common module for PHP
+ii  php7.4-gd                                7.4.12-3+0~20201103.32+debian10~1.gbpa97e22        amd64        GD module for PHP
+ii  php7.4-intl                              7.4.12-3+0~20201103.32+debian10~1.gbpa97e22        amd64        Internationalisation module for PHP
+ii  php7.4-json                              7.4.12-3+0~20201103.32+debian10~1.gbpa97e22        amd64        JSON module for PHP
+ii  php7.4-mbstring                          7.4.12-3+0~20201103.32+debian10~1.gbpa97e22        amd64        MBSTRING module for PHP
+ii  php7.4-mysql                             7.4.12-3+0~20201103.32+debian10~1.gbpa97e22        amd64        MySQL module for PHP
+ii  php7.4-opcache                           7.4.12-3+0~20201103.32+debian10~1.gbpa97e22        amd64        Zend OpCache module for PHP
+ii  php7.4-readline                          7.4.12-3+0~20201103.32+debian10~1.gbpa97e22        amd64        readline module for PHP
+ii  php7.4-xml                               7.4.12-3+0~20201103.32+debian10~1.gbpa97e22        amd64        DOM, SimpleXML, XML, and XSL module for PHP
+ii  php7.4-zip                               7.4.12-3+0~20201103.32+debian10~1.gbpa97e22        amd64        Zip module for PHP
+ii  phpmyadmin                               4:4.9.5+dfsg1-2~bpo10+1                            all          MySQL web administration tool
+ii  phpunit                                  7.5.6-1                                            all          Unit testing suite for PHP
+ii  phpunit-code-unit-reverse-lookup         1.0.1-1                                            all          look up what a line of code belongs to - PHPUnit component
+ii  phpunit-comparator                       3.0.2-1                                            all          functionality to compare PHP values for equality - PHPUnit component
+ii  phpunit-diff                             3.0.2-1                                            all          diff implementation - stand-alone component from PHPUnit
+ii  phpunit-environment                      4.1.0-1                                            all          functionality to handle HHVM/PHP environments - PHPUnit component
+ii  phpunit-exporter                         3.1.0-2                                            all          export variables for visualization - PHPUnit component
+ii  phpunit-global-state                     2.0.0really2.0.0-2                                 all          snapshotting of global state - PHPUnit component
+ii  phpunit-object-enumerator                3.0.3-3                                            all          enumerate all referenced objects - PHPUnit component
+ii  phpunit-object-reflector                 1.1.1-2                                            all          reflection of object attributes - PHPUnit component
+ii  phpunit-recursion-context                3.0.0-2                                            all          recursively process PHP variables - PHPUnit component
+ii  phpunit-resource-operations              2.0.1-1                                            all          provide a list of PHP built-in functions that operate on resources
+ii  phpunit-version                          2.0.1-1                                            all          Library that helps with managing the version number of Git-hosted PHP projects

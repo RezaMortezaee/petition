@@ -13,6 +13,6 @@ class TopicSeeder extends Seeder
      */
     public function run()
     {
-        //
+        \App\Models\Topic::factory(10)->create();
     }
 }

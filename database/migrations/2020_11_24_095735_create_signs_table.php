@@ -17,7 +17,7 @@ class CreateSignsTable extends Migration
             $table->id();
             $table->boolean('signed')->default(false);
             $table->timestamps();
-            
+
             $table->foreignId('user_id');
         });
     }

@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Sign;
 use App\Models\User;
 use App\Models\Comment;
 use App\Models\Petition;
@@ -30,10 +31,10 @@ class UserFactory extends Factory
             'email_verified_at' => now(),
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
             'remember_token' => Str::random(10),
-            
-            'sign_id' => User::factory(),
-            'petition_id' => Petition::factory(),
-            'comment_id' => Comment::factory(),
+
+            'sign_id' => $this->faker->unique(true)->numberBetween(1, 50),
+            'petition_id' => $this->faker->unique(true)->numberBetween(1, 50),
+            'comment_id' => $this->faker->unique(true)->numberBetween(1, 100),
         ];
     }
 }

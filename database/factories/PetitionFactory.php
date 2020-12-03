@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use App\Models\Petition;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -22,7 +23,9 @@ class PetitionFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'title' => $this->faker->word,
+            'body' => $this->faker->text($maxNbChars = 200),
+            'user_id' => $this->faker->unique(true)->numberBetween(1, 50)
         ];
     }
 }

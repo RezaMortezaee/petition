@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Sign;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class SignFactory extends Factory
@@ -22,7 +23,8 @@ class SignFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'signed' => $this->faker->boolean($chanceOfGettingTrue = 50),
+            'user_id' => $this->faker->unique(true)->numberBetween(1, 50)
         ];
     }
 }
