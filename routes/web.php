@@ -26,3 +26,7 @@ Route::post('petitions', [PetitionController::class, 'index']);
 /* Image Path */
 Route::get('upload-image', [UploadImageController::class, 'index']);
 Route::post('save', [UploadImageController::class, 'save']);
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return Inertia\Inertia::render('Dashboard');
+})->name('dashboard');
