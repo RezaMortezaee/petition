@@ -21,6 +21,6 @@
         </style>
     </head>
     <body class="antialiased">
-        <x-image></x-image>
+        HOME PAGE
     </body>
 </html>

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Topic;
+use App\Models\User;
 use Illuminate\Http\Request;
 
-class TopicController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class TopicController extends Controller
      */
     public function index()
     {
-        return Topic::all();
+        return User::all();
     }
 
     /**
@@ -26,63 +26,68 @@ class TopicController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => ['required', 'string', 'min:3']
+            'name' => ['required', 'string', 'min:3'],
+            'body' => ['unique:users','email'],
+            'password' => ['password', 'min:6'],
         ]);
 
-        $input = request()->all();
+        $input = $request->all();
 
-        $topic = Topic::create($input);
+        $user = User::create($input);
 
-        return response()->json(['data' => $topic], 201);
+        return response()->json(['data'=> $user], 201);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Topic  $topic
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        $topic = Topic::findOrFail($id);
+        $user = User::findOrFail($id);
 
-        return $topic;
+        return $user;
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Topic  $topic
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        $topic = Topic::findOrFail($id);
+        //FIXME: it redirects to /home
+        $user = User::findOrFail($id);
 
         $request->validate([
-            'name' => ['required', 'string', 'min:3']
+            'name' => ['required', 'string', 'min:3'],
+            'email' => ['unique:users','email'],
+            'password' => ['password', 'min:6'],
         ]);
 
-        $input = request()->all();
+        $input = $request->all();
 
-        $topic->fill($input)->save();
+        $user->fill($input)->save();
 
-        return response()->json(['data' => $topic], 201);
+        return response()->json(['data'=>$user], 201);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Topic  $topic
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        $topic = Topic::findOrFail($id);
+        $user = User::findOrFail($id);
 
-        $topic->delete();
+        $user->delete();
 
-        return response()->json(['data' => $topic], 200);
+        return response()->json(['data'=> $user], 200);
     }
 }

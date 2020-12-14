@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\PetitionController;
 use App\Http\Controllers\UploadImageController;
 
 /*
@@ -15,14 +15,11 @@ use App\Http\Controllers\UploadImageController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', function () { return view('welcome'); })->name('home');
 
 /* Petitions */
 Route::get('petitions', [PetitionController::class, 'index']);
 Route::post('petitions', [PetitionController::class, 'index']);
-
 
 /* Image Path */
 Route::get('upload-image', [UploadImageController::class, 'index']);

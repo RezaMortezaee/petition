@@ -18,6 +18,14 @@ class User extends Authenticatable
     use Notifiable;
     use TwoFactorAuthenticatable;
 
+    /* ADMIN and VERIFIED Users constants */
+    /*
+    const VERIFIED_USER = 'false';
+    const UNVERIFIED_USER = 'true';
+    const ADMIN_USER = 'true';
+    const Regular_USER = 'false';
+    */
+
     /**
      * The attributes that are mass assignable.
      *
@@ -58,4 +66,12 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    /**
+    * User Relations
+    */
+
+    //TODO: don't remember to create relations
+
+    //TODO: Implement the isVerified and isAdmin methods
 }

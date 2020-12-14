@@ -14,7 +14,7 @@ class TagController extends Controller
      */
     public function index()
     {
-        //
+        return Tag::all();
     }
 
     /**
@@ -25,7 +25,13 @@ class TagController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate(['name'=> ['required']]);
+
+        $input = $request->all();
+
+        $tag = Tag::create($input);
+
+        return response()->json(['data' => $tag], 201);
     }
 
     /**
@@ -34,9 +40,11 @@ class TagController extends Controller
      * @param  \App\Models\Tag  $tag
      * @return \Illuminate\Http\Response
      */
-    public function show(Tag $tag)
+    public function show($id)
     {
-        //
+        $tag = Tag::findOrFail($id);
+
+        return $tag;
     }
 
     /**
@@ -46,9 +54,17 @@ class TagController extends Controller
      * @param  \App\Models\Tag  $tag
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Tag $tag)
+    public function update(Request $request, $id)
     {
-        //
+        $tag = Tag::findOrFail($id);
+
+        $request->validate(['name' => ['required']]);
+
+        $input = $request->all();
+
+        $tag->fill($input)->save();
+
+        return response()->json(['data' => $tag], 201);
     }
 
     /**
@@ -57,8 +73,12 @@ class TagController extends Controller
      * @param  \App\Models\Tag  $tag
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Tag $tag)
+    public function destroy($id)
     {
-        //
+        $tag = Tag::findOrFail($id);
+
+        $tag->delete($id);
+
+        return response()->json(['data' => $tag], 201);
     }
 }
