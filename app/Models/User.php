@@ -2,6 +2,9 @@
 
 namespace App\Models;
 
+use App\Models\Sign;
+use App\Models\Comment;
+use App\Models\Petition;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -70,8 +73,20 @@ class User extends Authenticatable
     /**
     * User Relations
     */
+    public function sings()
+    {
+        return $this->hasMany(Sign::class, 'sign_id');
+    }
 
-    //TODO: don't remember to create relations
+    public function petitions()
+    {
+        return $this->hasMany(Petition::class, 'petition_id');
+    }
+
+    public function photos()
+    {
+        return $this->hasMany(Comment::class, 'photo_id');
+    }
 
     //TODO: Implement the isVerified and isAdmin methods
 }
