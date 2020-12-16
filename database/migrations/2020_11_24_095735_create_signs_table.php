@@ -14,7 +14,7 @@ class CreateSignsTable extends Migration
     public function up()
     {
         Schema::create('signs', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->boolean('signed')->default(false);
             $table->timestamps();
 

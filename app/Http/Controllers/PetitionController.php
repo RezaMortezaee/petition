@@ -14,7 +14,7 @@ class PetitionController extends Controller
      */
     public function index()
     {
-        //
+        return Petition::all();
     }
 
     /**
@@ -25,7 +25,16 @@ class PetitionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => ['required', 'string'],
+            'body' => ['required', 'string']
+        ]);
+
+        $inputs = $request->all();
+
+        $petitions = Petition::create($inputs);
+
+        return response()->json(['data' => $petitions], 201);
     }
 
     /**
@@ -34,9 +43,11 @@ class PetitionController extends Controller
      * @param  \App\Models\Petition  $petition
      * @return \Illuminate\Http\Response
      */
-    public function show(Petition $petition)
+    public function show($id)
     {
-        //
+        $petition = Petition::findOrFail($id);
+
+        return $petition;
     }
 
     /**
@@ -46,19 +57,32 @@ class PetitionController extends Controller
      * @param  \App\Models\Petition  $petition
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Petition $petition)
+    public function update(Request $request, $id)
     {
-        //
-    }
+        $request->validate([
+            'title' => ['required', 'string'],
+            'body' => ['required', 'string']
+            ]);
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Petition  $petition
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Petition $petition)
+        $petitions = Petition::findOrFail($id);
+
+        $inputs = $request->all();
+
+        $petitions->fill($inputs)->save();
+
+        return response()->json(['data' => $petitions], 201);
+        }
+
+        /**
+         * Remove the specified resource from storage.
+         *
+         * @param  \App\Models\Petition  $petition
+         * @return \Illuminate\Http\Response
+         */
+    public function destroy($id)
     {
-        //
+        $petitions = Petition::findOrFail($id);
+
+        return response()->json(['data' => $petitions], 201);
     }
 }

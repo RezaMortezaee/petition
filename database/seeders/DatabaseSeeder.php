@@ -14,7 +14,6 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-            //FIXME: db:seedSegmentation fault
             UserSeeder::class,
             TopicSeeder::class,
             TagSeeder::class,

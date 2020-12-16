@@ -24,7 +24,7 @@ class SignFactory extends Factory
     {
         return [
             'signed' => $this->faker->boolean($chanceOfGettingTrue = 50),
-            'user_id' => $this->faker->unique(true)->numberBetween(1, 50)
+            // 'user_id' => $this->faker->unique(true)->numberBetween(1, 50)
         ];
     }
 }

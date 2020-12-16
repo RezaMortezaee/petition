@@ -19,7 +19,7 @@ class CreatePetitionsTable extends Migration
             $table->text('body');
             $table->timestamps();
 
-            $table->foreignId('user_id')->constrained('users');
+            $table->foreignId('user_id')->nullable();
         });
     }
 

@@ -75,17 +75,17 @@ class User extends Authenticatable
     */
     public function sings()
     {
-        return $this->hasMany(Sign::class, 'sign_id');
+        return $this->belongsToMany(Sign::class);
     }
 
     public function petitions()
     {
-        return $this->hasMany(Petition::class, 'petition_id');
+        return $this->hasMany(Petition::class);
     }
 
     public function photos()
     {
-        return $this->hasMany(Comment::class, 'photo_id');
+        return $this->hasMany(Comment::class);
     }
 
     //TODO: Implement the isVerified and isAdmin methods

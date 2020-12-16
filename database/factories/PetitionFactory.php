@@ -22,6 +22,8 @@ class PetitionFactory extends Factory
      */
     public function definition()
     {
+        // Each petition is just for a single user
+        
         return [
             'title' => $this->faker->word,
             'body' => $this->faker->text($maxNbChars = 200),
