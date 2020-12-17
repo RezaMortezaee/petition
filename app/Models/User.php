@@ -73,16 +73,18 @@ class User extends Authenticatable
     /**
     * User Relations
     */
+
+    /* SIGN */
     public function sings()
     {
         return $this->belongsToMany(Sign::class);
     }
-
+    /* PETITION */
     public function petitions()
     {
         return $this->hasMany(Petition::class);
     }
-
+    /* COMMENT */
     public function photos()
     {
         return $this->hasMany(Comment::class);

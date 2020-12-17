@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use App\Models\Comment;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -23,7 +24,7 @@ class CommentFactory extends Factory
     {
         return [
             'body'=> $this->faker->sentence,
-            'user_id' => $this->faker->unique(true)->numberBetween(1, 50)
+            'user_id' => User::all()->random()->id
         ];
     }
 }

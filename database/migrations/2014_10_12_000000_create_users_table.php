@@ -23,6 +23,8 @@ class CreateUsersTable extends Migration
             $table->text('profile_photo_path')->nullable();
             $table->timestamps();
 
+            $table->foreignId('comment_id')->nullable();
+            $table->foreignId('petition_id')->nullable();
             $table->foreignId('current_team_id')->nullable();
         });
     }

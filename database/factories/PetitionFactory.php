@@ -23,11 +23,11 @@ class PetitionFactory extends Factory
     public function definition()
     {
         // Each petition is just for a single user
-        
+
         return [
             'title' => $this->faker->word,
             'body' => $this->faker->text($maxNbChars = 200),
-            'user_id' => $this->faker->unique(true)->numberBetween(1, 50)
+            'user_id' => User::all()->random()->id
         ];
     }
 }
