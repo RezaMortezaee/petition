@@ -44,11 +44,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(User $user)
     {
-        $user = User::findOrFail($id);
-
-        return $user;
+        return response()->json(['data'=> $user], 201);
     }
 
     /**
@@ -58,11 +56,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, User $user)
     {
         //FIXME: it redirects to /home
-        $user = User::findOrFail($id);
-
         $request->validate([
             'name' => ['required', 'string', 'min:3'],
             'email' => ['unique:users','email'],
@@ -82,10 +78,8 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(User $user)
     {
-        $user = User::findOrFail($id);
-
         $user->delete();
 
         return response()->json(['data'=> $user], 200);

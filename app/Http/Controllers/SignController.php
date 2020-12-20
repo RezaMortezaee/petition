@@ -13,7 +13,7 @@ class SignController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(User $user)
+    public function index()
     {
         //
     }

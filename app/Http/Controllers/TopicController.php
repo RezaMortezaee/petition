@@ -42,11 +42,9 @@ class TopicController extends Controller
      * @param  \App\Models\Topic  $topic
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Topic $topic)
     {
-        $topic = Topic::findOrFail($id);
-
-        return $topic;
+        return response()->json(['data' => $topic], 201);
     }
 
     /**
@@ -56,10 +54,8 @@ class TopicController extends Controller
      * @param  \App\Models\Topic  $topic
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Topic $topic)
     {
-        $topic = Topic::findOrFail($id);
-
         $request->validate([
             'name' => ['required', 'string', 'min:3']
         ]);
@@ -77,10 +73,8 @@ class TopicController extends Controller
      * @param  \App\Models\Topic  $topic
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Topic $topic)
     {
-        $topic = Topic::findOrFail($id);
-
         $topic->delete();
 
         return response()->json(['data' => $topic], 200);

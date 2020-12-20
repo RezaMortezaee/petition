@@ -40,11 +40,9 @@ class CommentController extends Controller
      * @param  \App\Models\Comment  $comment
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Comment $comment)
     {
-        $comment = Comment::findOrFail($id);
-
-        return $comment;
+        return response()->json(['data' => $comment], 200);
     }
 
     /**
@@ -54,11 +52,9 @@ class CommentController extends Controller
      * @param  \App\Models\Comment  $comment
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Comment $comment)
     {
         $request->validate(['body' => ['required', 'string']]);
-
-        $comment = Comment::findOrFail($id);
 
         $input = $request->all();
 
@@ -72,9 +68,8 @@ class CommentController extends Controller
      * @param  \App\Models\Comment  $comment
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Comment $comment)
     {
-        $comment = Comment::findOrFail($id);
 
         $comment->delete();
 
