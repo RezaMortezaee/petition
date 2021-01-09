@@ -71,6 +71,14 @@ class User extends Authenticatable
     ];
 
     /**
+    * Accessor and Mutator
+    */
+    public function setEmailAttribute($email)
+    {
+        $this->attributes['email'] = strtolower($email);
+    }
+    
+    /**
     * User Relations
     */
 
