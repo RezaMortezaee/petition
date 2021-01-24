@@ -6,12 +6,12 @@ use App\Models\Tag;
 use App\Models\User;
 use App\Models\Sign;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-
 
 class Petition extends Model
 {
-    use HasFactory;
+    use HasFactory, SoftDeletes;
 
     protected $fillable = [
         'title',

@@ -2,6 +2,7 @@
 
 namespace App\Exceptions;
 
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
 
@@ -35,6 +36,12 @@ class Handler extends ExceptionHandler
     {
         $this->reportable(function (Throwable $e) {
             //
+        });
+
+        $this->renderable(function (Throwable $e){
+            if ($e instanceof ModelNotFoundException) {
+                return response()->json(['error'=>' User not found with this identifier'], 404);
+            }
         });
     }
 }

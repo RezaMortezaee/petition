@@ -17,6 +17,7 @@ class CreatePetitionsTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->text('body');
+            $table->softDeletes(); //deleted_at
             $table->timestamps();
 
             $table->foreignId('user_id')->nullable();

@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->text('profile_photo_path')->nullable();
+            $table->softDeletes(); //deleted_at
             $table->timestamps();
 
             $table->foreignId('comment_id')->nullable();
